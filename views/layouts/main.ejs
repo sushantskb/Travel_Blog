@@ -107,30 +107,7 @@
     <!-- --Java Script-- -->
     <script src="js/index.js"></script>
 
-    <script>
-      const addEventOnElem = function (elem, type, callback) {
-        if (elem.length !== undefined) {
-          for (let i = 0; i < elem.length; i++) {
-            elem[i].addEventListener(type, callback);
-          }
-        } else {
-          elem.addEventListener(type, callback);
-        }
-      };
-
-      // Search Bar toggle
-      const searchBar = document.querySelector("[data-search-bar]");
-      const searchTogglers = document.querySelectorAll("[data-search-toggler]");
-      const overlay = document.querySelector("[data-overlay]");
-
-      const toggleSearchBar = function () {
-        searchBar.classList.toggle("active");
-        overlay.classList.toggle("active");
-        document.body.classList.toggle("active");
-      };
-
-      addEventOnElem(searchTogglers, "click", toggleSearchBar);
-    </script>
+    
 
     <!-- Ion-Icons -->
     <script
