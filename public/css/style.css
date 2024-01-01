@@ -503,3 +503,31 @@ body.active {
   margin-block-end: 25px;
 }
 /* --Hero Section End-- */
+
+/* --Recent Post-- */
+.top-author {
+  display: block;
+  text-align: right;
+}
+
+.recent .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 10px;
+}
+
+.top-author .avatar-item:not(:first-child) { margin-inline-end: -25px; }
+
+.top-author .span {
+  color: var(--eerie-black_80);
+  font-size: var(--fs-8);
+  margin-block-start: 10px;
+}
+
+.avatar.large {
+  border: 6px solid var(--white);
+  width: 70px;
+}
+
+.avatar.large:is(:hover, :focus) { transform: translateY(-3px); }
+/* --Recent Post End-- */
