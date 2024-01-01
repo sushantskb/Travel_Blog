@@ -224,7 +224,9 @@ body.active {
   background-color: var(--blue-ryb);
 }
 
-.section-subtitle { padding-block: 15px; }
+.section-subtitle {
+  padding-block: 15px;
+}
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
@@ -249,18 +251,26 @@ body.active {
   padding-inline: 15px;
 }
 
-.has-scrollbar::-webkit-scrollbar { height: 10px; }
+.has-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
 
-.has-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.has-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background-color: transparent;
   border-radius: var(--radius-pill);
 }
 
-.has-scrollbar::-webkit-scrollbar-button { width: 10px; }
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 10px;
+}
 
-.has-scrollbar:is(:hover, :focus-within)::-webkit-scrollbar-thumb { background-color: var(--light-gray-1); }
+.has-scrollbar:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray-1);
+}
 
 .scrollbar-item {
   min-width: 70%;
@@ -284,7 +294,9 @@ body.active {
   left: 10px;
 }
 
-.avatar-item:not(:first-child) { margin-inline-end: -15px; }
+.avatar-item:not(:first-child) {
+  margin-inline-end: -15px;
+}
 
 .avatar {
   width: 40px;
@@ -314,7 +326,9 @@ body.active {
   transition: var(--transition-1);
 }
 
-.card-tag:is(:hover, :focus) { background-color: var(--gainsboro); }
+.card-tag:is(:hover, :focus) {
+  background-color: var(--gainsboro);
+}
 
 .blog-card .card-title {
   margin-block: 8px 12px;
@@ -516,7 +530,14 @@ body.active {
   margin-block-end: 10px;
 }
 
-.top-author .avatar-item:not(:first-child) { margin-inline-end: -25px; }
+.recent .btn{
+  margin-inline: auto;
+  margin-block: 50px 30px;
+}
+
+.top-author .avatar-item:not(:first-child) {
+  margin-inline-end: -25px;
+}
 
 .top-author .span {
   color: var(--eerie-black_80);
@@ -529,5 +550,14 @@ body.active {
   width: 70px;
 }
 
-.avatar.large:is(:hover, :focus) { transform: translateY(-3px); }
+.avatar.large:is(:hover, :focus) {
+  transform: translateY(-3px);
+}
 /* --Recent Post End-- */
+
+/* --Recommended Posts-- */
+.recommended .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+  }
+/* --Recommended Posts End--  */
