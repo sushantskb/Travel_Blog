@@ -4,6 +4,7 @@
   --eerie-black_80: hsla(225, 9%, 9%, 0.8);
   --eerie-black_60: hsla(225, 9%, 9%, 0.6);
   --eerie-black: hsl(225, 9%, 9%);
+  --eerie-purple: hsl(269, 92%, 65%);
   --light-gray-1: hsl(0, 0%, 80%);
   --light-gray-2: hsl(240, 2%, 81%);
   --gainsboro: hsl(240, 9%, 91%);
@@ -210,7 +211,7 @@ body.active {
 }
 
 .btn {
-  background-color: var(--eerie-black);
+  background-color: var(--eerie-purple);
   color: var(--white);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
