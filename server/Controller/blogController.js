@@ -9,3 +9,7 @@ exports.allposts = async(req, res) => {
 exports.submitBlog = async(req, res) => {
     res.render("submit-blog")
 }
+
+exports.blogPage = async(req, res)=> {
+    res.render("blog.ejs");
+}

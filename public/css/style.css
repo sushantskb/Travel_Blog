@@ -563,66 +563,6 @@ body.active {
 }
 /* --Recommended Posts End--  */
 
-/* --Submit Blog-- */
-.submitBlog {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.input_field, textarea, .dropDown, .input_img, .input_dp {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s;
-}
-
-.input_field:focus, textarea:focus, .dropDown:focus, .input_img:focus, .input_dp:focus {
-  border-color: #3498db;
-}
-
-/* Style for making placeholder appear as a label */
-.input_field:focus + label,
-textarea:focus + label,
-.dropDown:focus + label,
-.input_img:focus + label,
-.input_dp:focus + label {
-  transform: translateY(-20px);
-  font-size: 12px;
-  color: #3498db;
-}
-
-.label {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #777;
-  transition: transform 0.3s, font-size 0.3s, color 0.3s;
-}
-
-/* Style for the drop-down menu */
-.dropDown {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url('https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css') no-repeat 90% 50%;
-  cursor: pointer;
-}
-
-/* Style for file input fields */
-.input_img, .input_dp {
-  cursor: pointer;
-}
-
-/* Responsive design */
-@media screen and (max-width: 600px) {
-  .submitBlog {
-      width: 90%;
-  }
-}
-
-/* --Submit Blog End-- */
-
 /* --Footer-- */
 .footer {
   padding-block: 40px 20px;

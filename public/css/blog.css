@@ -1,0 +1,90 @@
+.div-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust the max-width as needed */
+  }
+  
+  .image-container {
+    flex: 1;
+    max-width: 300px; /* Adjust the max-width as needed */
+  }
+  
+  .image-container img {
+    width: 100%;
+    border-radius: 8px 0 0 8px; /* Adjust border radius for the left corners only */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  category {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .small-image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .small-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-text h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .author-text h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .image-container img {
+      border-radius: 8px 8px 0 0; /* Adjust border radius for the top corners only */
+    }
+  
+    .small-image img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
