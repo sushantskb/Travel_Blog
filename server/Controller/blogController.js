@@ -5,3 +5,7 @@ exports.homepage = async (req, res) => {
 exports.allposts = async(req, res) => {
     res.render("allpost");
 }
+
+exports.submitBlog = async(req, res) => {
+    res.render("submit-blog")
+}
