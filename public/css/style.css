@@ -4,7 +4,7 @@
   --eerie-black_80: hsla(225, 9%, 9%, 0.8);
   --eerie-black_60: hsla(225, 9%, 9%, 0.6);
   --eerie-black: hsl(225, 9%, 9%);
-  --eerie-purple: hsl(269, 92%, 65%);
+  --eerie-purple: rgb(166, 89, 233);
   --light-gray-1: hsl(0, 0%, 80%);
   --light-gray-2: hsl(240, 2%, 81%);
   --gainsboro: hsl(240, 9%, 91%);
@@ -352,7 +352,7 @@ body.active {
 /* -- Reused Styles End -- */
 
 /* -- Header -- */
-.span,
+.search-btn .span,
 .header .btn {
   display: none;
 }
@@ -371,6 +371,18 @@ body.active {
 .header .wrapper {
   display: flex;
   gap: 15px;
+}
+
+.search-btn {
+  font-size: 28px;
+}
+
+.search-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.search-btn ion-icon {
+  --ionicon-stroke-width: 50px;
 }
 
 .nav-toggle-btn .span {
@@ -426,7 +438,72 @@ body.active {
 }
 /* -- Header End -- */
 
+/* --Search Bar-- */
+.search-bar {
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  transform: translateY(calc(-100% - 2px));
+  z-index: 4;
+  transition: var(--transition-1);
+  visibility: hidden;
+}
 
+.search-bar.active {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.search-bar .input-field {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  padding-inline-end: 60px;
+}
+
+.search-bar .input-field::placeholder {
+  color: var(--eerie-black);
+}
+
+.search-bar .input-field::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-close-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 45px;
+}
+
+.search-close-btn ion-icon {
+  --ionicon-stroke-width: 20px;
+}
+
+.search-bar-text {
+  font-size: 1.4rem;
+  color: var(--eerie-black_80);
+  margin-block-start: 5px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--eerie-black_80);
+  transition: var(--transition-1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 
 /* --Hero Section-- */
 .newsletter-text {
@@ -610,6 +687,12 @@ body.active {
   }
   /* ---Header End--- */
 
+  /* ---Search Bar--- */
+  .search-bar .input-field {
+    --fs-1: 3.6rem;
+  }
+  /* ---Search Bar End--- */
+
   /* ---Recomended Post, Footer--- */
   .recommended .grid-list,
   .footer-top {
@@ -660,6 +743,16 @@ body.active {
     gap: 40px 15px;
   }
   /* ---Reused Styles End--- */
+
+  /* ---Search Bar--- */
+  .search-bar {
+    padding: 25px;
+  }
+
+  .search-bar .input-field {
+    --fs-1: 4.6rem;
+  }
+  /* ---Search Bar End--- */
 
   /* ---Recent Post--- */
   .top-author {
@@ -751,6 +844,11 @@ body.active {
     padding-inline-start: 30px;
   }
 
+  .newsletter-text{
+    margin-bottom: 62px;
+    margin-left: 15px;
+  }
+
   .blog-card .card-title {
     padding-inline-end: 15px;
   }
@@ -769,7 +867,7 @@ body.active {
     display: none;
   }
 
-  .span,
+  .search-btn .span,
   .header .btn {
     display: block;
   }
@@ -778,9 +876,25 @@ body.active {
     gap: 10px;
   }
 
+  .search-btn,
   .header .btn {
     --fs-6: 1.8rem;
     padding: 6px 20px;
+  }
+
+  .search-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--cultured);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-500);
+    border-radius: var(--radius-pill);
+    transition: var(--transition-1);
+  }
+
+  .search-btn:is(:hover, :focus) {
+    background-color: var(--gainsboro);
   }
 
   .navbar,
@@ -811,11 +925,6 @@ body.active {
     line-height: 1.3;
   }
 
-  .newsletter-text{
-    margin-bottom: 62px;
-    margin-left: 15px;
-  }
-
   .hero .wrapper {
     display: flex;
     align-items: center;
@@ -835,7 +944,7 @@ body.active {
   }
   /* ---Recommended Post End--- */
 
-  /* ---Submit--- */
+  /* ---Newsletter--- */
   .newsletter {
     display: flex;
     align-items: center;
@@ -845,7 +954,7 @@ body.active {
   .newsletter .section-title {
     margin-block-end: 0;
   }
-  /* ---Submit End--- */
+  /* ---Newsletter End--- */
 }
 
 @media (min-width: 1200px) {

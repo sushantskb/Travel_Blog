@@ -12,7 +12,7 @@ app.use(expressLayouts);
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
-const routes = require("./server/Routes/travelRoutes");
+const routes = require("./server/Routes/blogRoutes");
 
 app.use("/", routes);
 
