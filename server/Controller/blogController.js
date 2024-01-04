@@ -1,15 +1,19 @@
 exports.homepage = async (req, res) => {
-    res.render("index");
+    return res.render("index");
 }
 
 exports.allposts = async(req, res) => {
-    res.render("allpost");
+    return res.render("allpost");
 }
 
 exports.submitBlog = async(req, res) => {
-    res.render("submit-blog")
+    return res.render("submit-blog")
 }
 
 exports.blogPage = async(req, res)=> {
-    res.render("blog.ejs");
+    return res.render("blog.ejs");
+}
+
+exports.contact = async(req, res)=> {
+    return res.render("contact");
 }

@@ -693,6 +693,10 @@ body.active {
   }
   /* ---Search Bar End--- */
 
+  hr{
+    margin-left: 34px !important;
+  }
+
   /* ---Recomended Post, Footer--- */
   .recommended .grid-list,
   .footer-top {
@@ -785,6 +789,10 @@ body.active {
     transform: translateY(-3px);
   }
   /* ---Recent Post End--- */
+
+  hr{
+    margin-left: 58px !important;
+  }
 
   /* ---Recommended Post--- */
   .recommended .grid-list {
