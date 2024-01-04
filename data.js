@@ -94,3 +94,33 @@
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
     }    
   ]
+[
+  {
+    "title": "i9 13th Gen",
+    "blog_image": "recommended-9.jpg",
+    "author_img": "author-4.jpg",
+    "category": "Tech",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+  },
+  {
+    "title": "Mackbook Pro",
+    "blog_image": "recommended-10.jpg",
+    "author_img": "author-5.jpg",
+    "category": "Tech",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+  },
+  {
+    "title": "Asus Zenbook Fold",
+    "blog_image": "recommended-11.jpg",
+    "author_img": "author-3.jpg",
+    "category": "Tech",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+  },
+  {
+    "title": "Lg OFlex",
+    "blog_image": "recommended-12.jpg",
+    "author_img": "author-2.jpg",
+    "category": "Tech",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+  }
+]
