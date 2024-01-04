@@ -71,3 +71,26 @@
       content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
     },
   ];
+  [
+    {
+      "title": "Our Universe",
+      "blog_image": "recommended-6.jpg",
+      "author_img": "author-1.jpg",
+      "category": "Science",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    {
+      "title": "Time Travel",
+      "blog_image": "recommended-7.jpg",
+      "author_img": "author-2.jpg",
+      "category": "Science",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },    
+    {
+      "title": "Parallel Universe",
+      "blog_image": "recommended-8.jpg",
+      "author_img": "author-3.jpg",
+      "category": "Science",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    }    
+  ]
