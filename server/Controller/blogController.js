@@ -1,7 +1,18 @@
 const Blog = require("../Models/Blog");
 
 exports.homepage = async (req, res) => {
-  res.render("index");
+    try {
+        const limitNumber = 4;
+        const featured = await Blog.find({}).sort({_id: -1}).limit(limitNumber);
+
+        const blogs = { featured };
+        console.log(blogs);
+        res.render("index", {blogs});
+
+    } catch (error) {
+        res.status(500).send({message: error.message || "Error Ocuured"});
+    }
+  
 };
 
 exports.allposts = async (req, res) => {
