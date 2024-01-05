@@ -127,6 +127,8 @@ async function insertDummyData() {
         "title": "i9 13th Gen",
         "blog_image": "recommended-9.jpg",
         "author_img": "author-4.jpg",
+        "authorName": "Ivy Turner",
+        "location": "Dallas",
         "category": "Tech",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
       },
@@ -134,6 +136,8 @@ async function insertDummyData() {
         "title": "Mackbook Pro",
         "blog_image": "recommended-10.jpg",
         "author_img": "author-5.jpg",
+        "authorName": "Jack Robinson",
+        "location": "Atlanta",
         "category": "Tech",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
       },
@@ -141,6 +145,8 @@ async function insertDummyData() {
         "title": "Asus Zenbook Fold",
         "blog_image": "recommended-11.jpg",
         "author_img": "author-3.jpg",
+        "authorName": "Katie Lee",
+        "location": "Phoenix",
         "category": "Tech",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
       },
@@ -148,12 +154,87 @@ async function insertDummyData() {
         "title": "Lg OFlex",
         "blog_image": "recommended-12.jpg",
         "author_img": "author-2.jpg",
+        "authorName": "Leo Garcia",
+        "location": "Houston",
         "category": "Tech",
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+      },
+      {
+        "title": "Our Universe",
+        "blog_image": "recommended-6.jpg",
+        "author_img": "author-1.jpg",
+        "authorName": "Frank Thompson",
+        "location": "Seattle",
+        "category": "Science",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+      },
+      {
+        "title": "Time Travel",
+        "blog_image": "recommended-7.jpg",
+        "author_img": "author-2.jpg",
+        "authorName": "Grace White",
+        "location": "Boston",
+        "category": "Science",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+      },    
+      {
+        "title": "Parallel Universe",
+        "blog_image": "recommended-8.jpg",
+        "author_img": "author-3.jpg",
+        "authorName": "Harry Martin",
+        "location": "Denver",
+        "category": "Science",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+      },
+      {
+        title: "The Fairy Pools on the Isle of Skye – Scotland",
+        blog_image: "recommended-1.jpg",
+        author_img: "author-5.jpg",
+        "authorName": "Alice Johnson",
+        "location": "New York",
+        category: "Travel",
+        content:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      },
+      {
+        title: "Marble Caverns of Carrera Lake – Chile",
+        blog_image: "recommended-5.jpg",
+        author_img: "author-6.jpg",
+        "authorName": "Bob Smith",
+        "location": "Los Angeles",
+        category: "Travel",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      },
+      {
+        title: "Northern Lights",
+        blog_image: "recommended-4.jpg",
+        author_img: "author-4.jpg",
+        "authorName": "Charlie Davis",
+    "location": "Chicago",
+        category: "Travel",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      },
+      {
+        title: "Railay Beach",
+        blog_image: "recommended-3.jpg",
+        author_img: "author-1.jpg",
+        "authorName": "David Miller",
+    "location": "Miami",
+        category: "Travel",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      },
+      {
+        title: "Rainbow mountains",
+        blog_image: "recommended-2.jpg",
+        author_img: "author-3.jpg",
+        "authorName": "Eva Rodriguez",
+        "location": "San Francisco",
+        category: "Travel",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       }       
     ]);
   } catch (err) {
     console.error(err);
   }
 }
-// insertDummyData();
+insertDummyData();
