@@ -30,6 +30,18 @@ exports.allposts = async (req, res) => {
   }
 };
 
+exports.exploreBlogById = async (req, res) => {
+  try {
+    let categoryId = req.params.id;
+    // console.log(categoryId);
+    const categoryById = await Blog.find({"category" : categoryId});
+    const showauthors = await Blog.find({"category": categoryId}).sort({_id : -1}).limit(5);
+    return res.render("category", { title: categoryId ,categoryById, showauthors });
+  } catch (error) {
+    return res.status(500).send({message: error.message || "Error Ocuured"});
+  }
+}
+
 exports.submitBlog = async (req, res) => {
   return res.render("submit-blog");
 };
