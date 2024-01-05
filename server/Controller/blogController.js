@@ -47,7 +47,14 @@ exports.submitBlog = async (req, res) => {
 };
 
 exports.blogPage = async (req, res) => {
-  return res.render("blog.ejs");
+  try {
+    let blogId = req.params.id;
+    const blog = await Blog.findById(blogId);
+    console.log(blog);
+    return res.render("blog", { blog })
+  } catch (error) {
+    return res.status(500).send({message: error.message || "Error Ocuured"});
+  }
 };
 
 exports.contact = async (req, res) => {

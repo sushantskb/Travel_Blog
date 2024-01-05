@@ -1,21 +1,24 @@
 .div-container {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 0 auto;
-    max-width: 800px; /* Adjust the max-width as needed */
-  }
-  
-  .image-container {
-    flex: 1;
-    max-width: 300px; /* Adjust the max-width as needed */
-  }
-  
-  .image-container img {
-    width: 100%;
-    border-radius: 8px 0 0 8px; /* Adjust border radius for the left corners only */
-  }
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px; /* Adjust the max-width as needed */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 300px; /* Adjust the max-width as needed */
+  height: 200px; /* Set a fixed height for the image container */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border-radius: 8px 0 0 8px; /* Adjust border radius for the left corners only */
+}
   
   .content {
     flex: 1;

@@ -1,20 +1,25 @@
-<link rel="stylesheet" href="css/blog.css">
+<link rel="stylesheet" href="/css/blog.css">
 <div class="div-container">
-    <div class="image-container">
-        <img src="assets/images/recent-1.jpg" alt="">
-    </div>
-    <div class="content">
-        <category>Travel</category>
-        <h1 class="title">Title</h1>
-        <hr>
-        <h2 class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eveniet laboriosam ipsum nihil ex, ea corrupti saepe? Dicta facilis, maxime dolores laboriosam dolor provident, ipsa illo doloribus fugiat expedita officiis cumque fugit in deserunt eligendi facere quasi et. Voluptates, nam expedita unde amet natus vitae illo dignissimos culpa tempore eum harum, non ex deleniti aut consequuntur!</h2>
-        <hr>
-        <div class="small-image">
-            <img src="/assets/images/author-1.jpg">
-            <div class="author-text">
-                <h3>Alex</h3>
-                <h4>From USA</h4>
+    <% if(blog != null) { %>
+        
+            <div class="image-container">
+                <img src="/assets/images/<%= blog.blog_image %>" alt="" style="height: 378px;">
             </div>
-        </div>
-    </div>
+            <div class="content">
+                <category><%= blog.category %></category>
+                <h1 class="title"><%= blog.title %></h1>
+                <hr>
+                <h2 class="desc"><%= blog.content %></h2>
+                <hr>
+                <div class="small-image">
+                    <img src="/assets/images/<%= blog.author_img %>">
+                    <div class="author-text">
+                        <h3>Alex</h3>
+                        <h4>From USA</h4>
+                    </div>
+                </div>
+            </div>
+    <% } else { %>
+        <p>Nothing Found</p>
+   <% } %>
 </div>
