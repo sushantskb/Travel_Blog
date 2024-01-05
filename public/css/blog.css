@@ -15,7 +15,7 @@
 
 .image-container img {
   width: 100%;
-  height: 100%;
+  height: 192%;
   object-fit: cover; /* Maintain aspect ratio and cover the entire container */
   border-radius: 8px 0 0 8px; /* Adjust border radius for the left corners only */
 }

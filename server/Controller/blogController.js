@@ -43,8 +43,67 @@ exports.exploreBlogById = async (req, res) => {
 }
 
 exports.submitBlog = async (req, res) => {
-  return res.render("submit-blog");
+  try {
+    const infoErrorObj = req.flash("infoErrors");
+    const infoSubmitObj = req.flash("infoSubmit");
+    return res.render("submit-blog", {infoErrorObj, infoSubmitObj});
+  } catch (error) {
+    res.status(500).send({message: error.message || "Error Occured"});
+  }
 };
+
+exports.submitBlogOnPost = async (req, res) => {
+  try {
+    let imageUploadBlog;
+let imageUploadDp;
+let uploadPathForBlog;
+let uploadPathForDP;
+let newBlogImage;
+let newDPImage;
+
+if (!req.files || Object.keys(req.files).length === 0) {
+  console.log("No files were uploaded");
+} else {
+  imageUploadBlog = req.files.blogPost;
+  imageUploadDp = req.files.blogDP;
+
+  newBlogImage = Date.now() + imageUploadBlog.name;
+  newDPImage = Date.now() + imageUploadDp.name;
+
+  uploadPathForBlog = require("path").resolve("./") + "/public/assets/images/" + newBlogImage;
+
+  uploadPathForDP = require("path").resolve("./")+ "/public/assets/images/" + newDPImage;
+
+  imageUploadBlog.mv(uploadPathForBlog, function (err) {
+    if (err) return res.status(500).send(err);
+  });
+
+  imageUploadDp.mv(uploadPathForDP, function (err) {
+    if (err) return res.status(500).send(err);
+  });
+
+  const newBlog = new Blog({
+    title: req.body.title,
+    content: req.body.content,
+    authorName: req.body.name,
+    location: req.body.location,
+    category: req.body.category,
+    blog_image: newBlogImage,
+    author_img: newDPImage
+  });
+
+  await newBlog.save();
+
+  req.flash("infoSubmit", "Blog has been added");
+  res.redirect("/submit-blog");
+}
+
+  } catch (error) {
+    req.flash("infoErrors", error);
+    console.log(error);
+    res.redirect("submit-blog");
+  }
+}
 
 exports.blogPage = async (req, res) => {
   try {

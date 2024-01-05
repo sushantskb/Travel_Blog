@@ -9,6 +9,14 @@ const blogSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    authorName: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    },
     category:{
         type: String,
         enum: ["Travel", "Tech", "Science", "Cooking", "Others"]

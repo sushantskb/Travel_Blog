@@ -1,6 +1,21 @@
 <link rel="stylesheet" href="./css/submit.css" />
-<form class="submitBlog">
-  <input type="text" placeholder="Title" class="input_field" />
+
+<% if(infoSubmitObj != "") { %>
+  <div class="success-message">
+    <%= infoSubmitObj %>
+  </div>
+<% } %>
+
+<% if(infoErrorObj != "") { %>
+  <div class="failure-message">
+    <%= infoErrorObj[0].message %>
+  </div>
+<% } %>
+
+<form class="submitBlog" action="/submit-blog" enctype="multipart/form-data" method="post">
+  <input type="text" placeholder="Title" class="input_field" name="title"/>
+  <input type="text" placeholder="Your Name" class="input_field" name="name"/>
+  <input type="text" placeholder="You are From" class="input_field" name="location"/>
   <textarea
     name="content"
     id=""
@@ -8,7 +23,7 @@
     rows="10"
     placeholder="Content"
   ></textarea>
-  <select aria-placeholder="Select your topic" class="dropDown">
+  <select aria-placeholder="Select your topic" name="category" class="dropDown">
     <option value="Travel">Travel</option>
     <option value="Cooking">Cooking</option>
     <option value="Science">Science</option>
@@ -16,13 +31,14 @@
     <option value="Others" selected>Others</option>
   </select>
   <label for="blogPost">Upload your blog image</label>
-  <input name="blogPost" type="file" placeholder="Image" class="input_img" />
+  <input name="blogPost" type="file" placeholder="Image" class="input_img" accept="image/*" />
   <label for="blogDP">Upload your DP</label>
   <input
     name="blogDP"
     type="file"
     placeholder="Upload your image"
     class="input_dp"
+    accept="image/*"
   />
   <button
     type="submit"
