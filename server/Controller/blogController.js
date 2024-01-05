@@ -8,18 +8,25 @@ exports.homepage = async (req, res) => {
         const travel = await Blog.find({ "category": "Travel" }).sort({_id: -1}).limit(5);
         const science = await Blog.find({"category": "Science"}).sort({_id: -1}).limit(5);
         const tech = await Blog.find({"category": "Tech"}).sort({_id: -1}).limit(5);
-        const blogs = { featured, travel, science, tech };
+        const cooking = await Blog.find({"category": "Cooking"}).sort({_id: -1}).limit(5);
+        const others = await Blog.find({"category":"Others"}).sort({_id: -1}).limit(5);
+        const blogs = { featured, travel, science, tech, cooking, others };
         console.log(blogs);
-        res.render("index", { blogs });
+        return res.render("index", { blogs });
 
     } catch (error) {
-        res.status(500).send({message: error.message || "Error Ocuured"});
+        return res.status(500).send({message: error.message || "Error Ocuured"});
     }
   
 };
 
 exports.allposts = async (req, res) => {
-  return res.render("allpost");
+  try {
+    const showAll = await Blog.find({});
+    return res.render("allpost", { showAll });
+  } catch (error) {
+    return res.status(500).send({message: error.message || "Error Ocuured"});
+  }
 };
 
 exports.submitBlog = async (req, res) => {

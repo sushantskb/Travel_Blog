@@ -281,6 +281,126 @@
     </section>
     <!-- --Tech Blog End-- -->
 
+    <!-- --Cooking Blog-- -->
+    <section class="section recommended" aria-label="recommended post">
+      <div class="container">
+
+        <p class="section-subtitle">
+          <strong class="strong">Cooking Blogs</strong>
+        </p>
+
+        <ul class="grid-list">
+
+          <% if(blogs !== "" && blogs.cooking != "") { %>
+            <% blogs.cooking.forEach(function(blog, index) { %>
+              <li>
+                <div class="blog-card">
+                  <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                    <img src="./assets/images/<%= blog.blog_image %>" width="300" height="360" loading="lazy"
+                      alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
+                          <img src="./assets/images/<%= blog.author_img %>" width="100" height="100" loading="lazy" alt="Author"
+                            class="img-cover">
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h5">
+                      <a href="#" class="card-title hover:underline">
+                        <%= blog.title %>
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+            <% }) %>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/view-more.jpg" width="300" height="360" loading="lazy"
+                    alt="The difference is quality " class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h5">
+                    <a href="#" class="card-title hover:underline" style="text-align: center;">
+                      View More
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+          <% } else { %>
+            <p>No items found</p>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+    <!-- --Cooking Blog End-- -->
+
+    <!-- --Others Blog-- -->
+    <section class="section recommended" aria-label="recommended post">
+      <div class="container">
+
+        <p class="section-subtitle">
+          <strong class="strong">Others</strong>
+        </p>
+
+        <ul class="grid-list">
+
+          <% if(blogs !== "" && blogs.others != "") { %>
+            <% blogs.others.forEach(function(blog, index) { %>
+              <li>
+                <div class="blog-card">
+                  <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                    <img src="./assets/images/<%= blog.blog_image %>" width="300" height="360" loading="lazy"
+                      alt="The trick to getting more done is to have the freedom to roam around " class="img-cover">
+                    <ul class="avatar-list absolute">
+                      <li class="avatar-item">
+                        <a href="#" class="avatar img-holder" style="--width: 100; --height: 100;">
+                          <img src="./assets/images/<%= blog.author_img %>" width="100" height="100" loading="lazy" alt="Author"
+                            class="img-cover">
+                        </a>
+                      </li>
+                    </ul>
+                  </figure>
+                  <div class="card-content">
+                    <h3 class="h5">
+                      <a href="#" class="card-title hover:underline">
+                        <%= blog.title %>
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+            <% }) %>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 300; --height: 360;">
+                  <img src="./assets/images/view-more.jpg" width="300" height="360" loading="lazy"
+                    alt="The difference is quality " class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h5">
+                    <a href="#" class="card-title hover:underline" style="text-align: center;">
+                      View More
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </li>
+          <% } else { %>
+            <p>No items found</p>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+    <!-- --Others Blog End-- -->
+
     <!-- --Submit Posts-- -->
     <section class="section newsletter">
 
