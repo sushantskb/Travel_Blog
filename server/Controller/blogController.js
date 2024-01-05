@@ -23,7 +23,8 @@ exports.homepage = async (req, res) => {
 exports.allposts = async (req, res) => {
   try {
     const showAll = await Blog.find({});
-    return res.render("allpost", { showAll });
+    const showauthors = await Blog.find({}).sort({_id : -1}).limit(5);
+    return res.render("allpost", { showAll, showauthors });
   } catch (error) {
     return res.status(500).send({message: error.message || "Error Ocuured"});
   }
