@@ -23,31 +23,36 @@ Before you begin, ensure you have met the following requirements:
 
 ```bash
 git clone https://github.com/your-username/blog-it.git
+```
 
 2. Navigate to the project directory:
 
 ```bash
 cd blog-it
+```
 
 3. Install dependencies:
 
 ```bash
 npm install
+```
 
 4.Create a .env file in the root directory and set the following environment variables:
 
 ```bash
 MONGODB=mongodb+srv://sushantskb:Qazwsxedc123456@cluster1.lvfuaoc.mongodb.net/blogIt?retryWrites=true&w=majority
 secret=BlogItSecureSession
+```
 
 5. Start the application:
 ```bash
 npm start
+```
 
-Usage
-Open your web browser and navigate to http://localhost:6969
+## Usage
+** Open your web browser and navigate to http://localhost:6969
 
-Contributing
+## Contributing
 If you would like to contribute to Blog It, please follow these guidelines:
 
 1. Fork the repository.
@@ -55,5 +60,5 @@ If you would like to contribute to Blog It, please follow these guidelines:
 3 .Make your changes and test thoroughly.
 4 .Submit a pull request with a clear description of your changes.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
