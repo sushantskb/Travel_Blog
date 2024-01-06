@@ -68,3 +68,19 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
+.success-message, .failure-message {
+    max-width: 1000px; /* Set the max-width as needed */
+    margin: 0 auto; /* Center horizontally */
+    background: #58af58; /* Green background color for success */
+    text-align: center;
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    color: #fff; /* White text color */
+  }
+  
+  .failure-message {
+    background: #f44336; /* Red background color for failure */
+  }

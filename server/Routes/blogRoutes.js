@@ -9,5 +9,6 @@ router.post("/submit-blog", blogController.submitBlogOnPost);
 router.get("/blog/:id", blogController.blogPage);
 router.post("/search", blogController.searchBlog)
 router.get("/contact", blogController.contact);
+router.post("/contact", blogController.contactOnPost);
 
 module.exports = router;

@@ -1,7 +1,14 @@
-<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/contact.css" />
+
 <div class="body">
+  <% if(infoSubmitObj != "") { %>
+  <div class="success-message"><%= infoSubmitObj %></div>
+  <% } %> <% if(infoErrorObj != "") { %>
+  <div class="failure-message"><%= infoErroObj %></div>
+  <% } %>
+
   <div class="contact-container">
-    <form action="" class="contact-form">
+    <form action="/contact" method="post" class="contact-form">
       <label for="fname">Enter your Name</label>
       <input
         class="input-field"
@@ -18,16 +25,23 @@
       />
       <label for="text-area">Message or Suggestion</label>
       <textarea
-        name="text-area"
-        id=""
+        name="message"
         cols="30"
         rows="10"
         placeholder="Type Here....."
       ></textarea>
-      <button type="submit" class="btn" style="width: 100px;
-      font-size: 18px;
-      padding: 12px 12px;
-      text-align: center;">Send</button>
+      <button
+        type="submit"
+        class="btn"
+        style="
+          width: 100px;
+          font-size: 18px;
+          padding: 12px 12px;
+          text-align: center;
+        "
+      >
+        Send
+      </button>
     </form>
   </div>
 </div>

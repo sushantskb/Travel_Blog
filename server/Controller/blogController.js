@@ -1,5 +1,6 @@
 const Blog = require("../Models/Blog");
 const Feature = require("../Models/Feature");
+const Contact = require("../Models/Contact");
 
 exports.homepage = async (req, res) => {
   try {
@@ -153,8 +154,33 @@ exports.searchBlog = async(req, res) => {
 }
 
 exports.contact = async (req, res) => {
-  return res.render("contact");
+  try {
+    const infoErrorObj = req.flash("infoErrors");
+    const infoSubmitObj = req.flash("infoSubmit");
+    return res.render("contact", {infoErrorObj, infoSubmitObj});
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occured" });
+  }
 };
+
+exports.contactOnPost = async(req, res) => {
+  try {
+    const newContact = new Contact({
+      name: req.body.fname,
+      email: req.body.email,
+      message: req.body.message
+    });
+
+    await newContact.save();
+
+    req.flash("infoSubmit", "Message Sent Successfully");
+    res.redirect("/contact");
+  } catch (error) {
+    req.flash("infoErrors", error);
+    console.log(error);
+    res.redirect("/contact");
+  }
+}
 
 // async function insertDummyData() {
 //   try {
