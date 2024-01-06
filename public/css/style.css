@@ -222,7 +222,7 @@ body.active {
 }
 
 .btn:is(:hover, :focus) {
-  background-color: var(--blue-ryb);
+  background-color: rgb(36, 240, 145);
 }
 
 .section-subtitle {

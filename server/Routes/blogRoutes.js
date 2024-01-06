@@ -7,6 +7,7 @@ router.get("/categories/:id", blogController.exploreBlogById);
 router.get("/submit-blog", blogController.submitBlog);
 router.post("/submit-blog", blogController.submitBlogOnPost);
 router.get("/blog/:id", blogController.blogPage);
+router.post("/search", blogController.searchBlog)
 router.get("/contact", blogController.contact);
 
 module.exports = router;

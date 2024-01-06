@@ -30,4 +30,7 @@ const blogSchema = new mongoose.Schema({
     }
 });
 
+// search feature
+blogSchema.index({title: "text", content: "text", category: "text"});
+
 module.exports = mongoose.model("Blog", blogSchema);
