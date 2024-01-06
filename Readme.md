@@ -3,9 +3,7 @@
 Blog It is a simple and customizable blogging platform built using Node.js, Express.js, EJS, and MongoDB. It provides an easy-to-use interface for creating, editing, and managing blog posts.
 
 ## Features
-
-- **User Authentication:** Secure user authentication system allows users to sign up, log in, and manage their blog posts.
-- **Create and Edit Posts:** Users can create new blog posts, edit existing ones, and delete posts as needed.
+- **Create:** Users can create new blog posts, edit existing ones, and delete posts as needed.
 - **Responsive Design:** The website is designed to be responsive and accessible on various devices, ensuring a seamless user experience.
 - **Database Integration:** MongoDB is used as the database to store blog posts and user information.
 - **Customization:** Easily customize the website by modifying the EJS templates and stylesheets to match your desired look and feel.
